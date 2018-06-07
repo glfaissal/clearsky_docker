@@ -24,9 +24,9 @@ RUN set -x; \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
         && pip install psycogreen==1.0 \
-        && easy_install -U pip
-        && pip install --upgrade pip
-        && pip install dropbox
+        && easy_install -U pip \
+        && pip install --upgrade pip \
+        && pip install dropbox \
         && pip install icalendar
 
 # Install Odoo
